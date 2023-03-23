@@ -1,0 +1,28 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+namespace AspCourse.Console.Tests
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethodSquared()
+        {
+            int w = 5;
+            int expected = 25;
+            Square squared = new Square();
+            double actual = squared.Squared(w);
+            Assert.AreEqual(expected, actual, "TestMethodSquared is not correct");
+
+        }
+        public void TestMethodIteratorSquared()
+        {
+            int w = 2, c = 5, s = 3;
+            int expected = 180;
+            Square squared = new Square();
+            double actual = squared.IteratorSquared(c, w, s);
+            Assert.AreEqual(expected, actual, "TestMethodIteratorSquared is not correct");
+        }
+    }
+}
