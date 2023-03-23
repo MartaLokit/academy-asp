@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AspCourse.Console
+{
+    public class Square
+    {
+        double Width, Height, h;
+        const double value = 1 / 2;
+        public double Squared(double width)
+        {
+            return Math.Pow(width, 2);
+        }
+        public double Rectangle()
+        {
+            return Width * Height;
+        }
+        public double Parallelogram()
+        {
+            return Width * Height;
+        }
+        public double Triangle()
+        {
+            return value * Width * Height;
+        }
+        public double Trapezoid()
+        {
+            return value * (Width + Height) / h;
+        }
+        public double IteratorSquared(int count, int width, int step)
+        {
+            double result = 0;
+            for (int i = 0; i < count; i++)
+            {
+                result += Squared(width * step);
+            }
+            return result;
+        }
+    }
+}
